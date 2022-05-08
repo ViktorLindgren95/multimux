@@ -21,4 +21,5 @@ USER root
 # Copies the built binary from the builder. Golang makes an Exe that works everywhere so we dont need a large image
 COPY --from=builder /workspace/listener .
 USER 1001
+EXPOSE 3000
 ENTRYPOINT ["/listener"]
