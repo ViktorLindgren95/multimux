@@ -7,7 +7,7 @@ ENV GONOSUMDB="direct"
 WORKDIR /workspace
 # Copy the Go Module Manifest
 COPY go.mod go.mod
-COPY go.sum go.sum
+#COPY go.sum go.sum
 #I prefer running x incase stuff breaks, it just becomes verbose
 RUN go mod download -x
 # Copy the go source
